@@ -61,4 +61,20 @@ dtype: int64
 2     9
 3    20
 dtype: int64
->>>
+
+
+
+
+>>> a = pd.Series([1, 2, 3, 4, 5], index=['c', 'b', 'a', 'g', 'h'])
+>>> a
+c    1
+b    2
+a    3
+g    4
+h    5
+dtype: int64
+>>> a['b':'g']
+b    2
+a    3
+g    4
+dtype: int64
