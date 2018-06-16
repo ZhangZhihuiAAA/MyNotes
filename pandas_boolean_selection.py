@@ -24,3 +24,17 @@ ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.i
 4    4
 5    5
 dtype: int32
+
+ 
+
+>>> (s >= 0).all()
+True
+>>> (s < 2).any()
+True
+>>> s[s < 2].any()
+True
+>>> s.any()
+True
+>>> s.all()
+False
+>>>
