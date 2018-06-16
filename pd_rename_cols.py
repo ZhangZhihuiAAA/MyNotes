@@ -10,3 +10,8 @@ ZTS     Health Care   30.53      2.150
 [500 rows x 3 columns]
 >>> sp500.columns
 Index(['Sector', 'Price', 'Book Value'], dtype='object')
+
+
+>>> sp500.rename(columns={'Book Value': 'BookValue'}, inplace=True)
+>>> sp500.columns
+Index(['Sector', 'Price', 'BookValue'], dtype='object')
