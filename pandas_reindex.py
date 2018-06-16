@@ -1,0 +1,36 @@
+>>> s
+0    0
+1    1
+2    2
+3    3
+4    4
+5    5
+dtype: int32
+>>> s.reindex([0, 'a', 2, 'b', 4, 'c', 'd', 'e'])
+0    0.0
+a    NaN
+2    2.0
+b    NaN
+4    4.0
+c    NaN
+d    NaN
+e    NaN
+dtype: float64
+>>> s.reindex([0, 'a', 2, 'b', 4, 'c', 'd', 'e'], fill_value=9)
+0    0
+a    9
+2    2
+b    9
+4    4
+c    9
+d    9
+e    9
+dtype: int32
+>>> s
+0    0
+1    1
+2    2
+3    3
+4    4
+5    5
+dtype: int32
