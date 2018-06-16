@@ -37,4 +37,5 @@ True
 True
 >>> s.all()
 False
->>>
+>>> (s < 4).sum()
+4
