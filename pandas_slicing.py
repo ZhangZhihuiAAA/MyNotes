@@ -1,4 +1,6 @@
-A slice is a reference to the data in the source. The use of .iloc[] returns a copy of the data in the source.
+A slice is a reference to the data in the source. The result of the slice is a view into the Original Series. 
+The use of .iloc[] returns a copy of the data in the source.
+
 
 >>> import pandas as pd
 >>> a = pd.Series([0, 1, 2, 3, 4, 5])
