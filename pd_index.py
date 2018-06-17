@@ -136,14 +136,6 @@ IntervalIndex([(0.0, 0.5], (0.5, 1.0], (1.0, 1.5], (1.5, 2.0]]
 2
 >>> df_interval.index.get_loc(1.7)
 3
->>> df_interval.iloc(df_interval.index.get_loc(1.7))
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "D:\Python36\lib\site-packages\pandas\core\indexing.py", line 103, in __call__
-    axis = self.obj._get_axis_number(axis)
-  File "D:\Python36\lib\site-packages\pandas\core\generic.py", line 357, in _get_axis_number
-    .format(axis, type(self)))
-ValueError: No axis named 3 for object type <class 'pandas.core.frame.DataFrame'>
 >>> df_interval.iloc[df_interval.index.get_loc(1.7)]
 A    4
 Name: (1.5, 2.0], dtype: int64
