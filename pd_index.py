@@ -197,3 +197,8 @@ b  2
 b  3
 c  4
 a  5
+>>> df_categorical.loc['b']
+   A
+C
+b  2
+b  3
