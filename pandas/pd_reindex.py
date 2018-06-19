@@ -131,7 +131,14 @@ ABT                Health Care   39.60      15.573
 ABBV               Health Care   53.95       2.954
 ACN     Information Technology   79.79       8.326
 ACE                 Financials  102.91      86.897
-
+>>> s0 = s.reset_index()
+>>> s0
+  Symbol                  Sector   Price  Book Value
+0    MMM             Industrials  141.14      26.668
+1    ABT             Health Care   39.60      15.573
+2   ABBV             Health Care   53.95       2.954
+3    ACN  Information Technology   79.79       8.326
+4    ACE              Financials  102.91      86.897
 >>> s1 = s.set_index('Sector')
 >>> s1
                          Price  Book Value
@@ -167,3 +174,15 @@ ABT                Health Care   39.60      15.573
 ABBV               Health Care   53.95       2.954
 ACN     Information Technology   79.79       8.326
 ACE                 Financials  102.91      86.897
+
+>>> s3 = s.reindex(columns=['Price', 'Book Value', 'NewCol'])
+>>> s3
+         Price  Book Value  NewCol
+Symbol
+MMM     141.14      26.668     NaN
+ABT      39.60      15.573     NaN
+ABBV     53.95       2.954     NaN
+ACN      79.79       8.326     NaN
+ACE     102.91      86.897     NaN
+>>> s3.index
+Index(['MMM', 'ABT', 'ABBV', 'ACN', 'ACE'], dtype='object', name='Symbol')
