@@ -121,3 +121,49 @@ dtype: object
 5     blue
 9     blue
 dtype: object
+
+
+>>> s
+                        Sector   Price  Book Value
+Symbol
+MMM                Industrials  141.14      26.668
+ABT                Health Care   39.60      15.573
+ABBV               Health Care   53.95       2.954
+ACN     Information Technology   79.79       8.326
+ACE                 Financials  102.91      86.897
+
+>>> s1 = s.set_index('Sector')
+>>> s1
+                         Price  Book Value
+Sector
+Industrials             141.14      26.668
+Health Care              39.60      15.573
+Health Care              53.95       2.954
+Information Technology   79.79       8.326
+Financials              102.91      86.897
+>>> s
+                        Sector   Price  Book Value
+Symbol
+MMM                Industrials  141.14      26.668
+ABT                Health Care   39.60      15.573
+ABBV               Health Care   53.95       2.954
+ACN     Information Technology   79.79       8.326
+ACE                 Financials  102.91      86.897
+
+>>> s2 = s.reindex(index=['MMM', 'ABT', 'FOO', 'CON', 'MOO'])
+>>> s2
+             Sector   Price  Book Value
+Symbol
+MMM     Industrials  141.14      26.668
+ABT     Health Care   39.60      15.573
+FOO             NaN     NaN         NaN
+CON             NaN     NaN         NaN
+MOO             NaN     NaN         NaN
+>>> s
+                        Sector   Price  Book Value
+Symbol
+MMM                Industrials  141.14      26.668
+ABT                Health Care   39.60      15.573
+ABBV               Health Care   53.95       2.954
+ACN     Information Technology   79.79       8.326
+ACE                 Financials  102.91      86.897
