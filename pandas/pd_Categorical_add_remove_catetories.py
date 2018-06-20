@@ -24,3 +24,11 @@ Categories (4, object): [bronze, silver, gold, platinum]
 >>> with_platinum
 [bronze, silver, gold, bronze]
 Categories (3, object): [bronze, silver, gold]
+
+
+>>> cat
+[a, c, a]
+Categories (3, object): [a < b < c]
+>>> cat.set_categories(['a', 'd'])
+[a, NaN, a]
+Categories (2, object): [a < d]
