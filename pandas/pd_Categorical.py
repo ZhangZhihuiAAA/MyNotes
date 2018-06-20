@@ -47,5 +47,21 @@ Index(['high', 'low', 'medium'], dtype='object')
 4    0
 dtype: int8
 
+>>> metal_values = ["bronze", "gold", "silver", "bronze"]
+>>> metal_categories = ["bronze", "silver", "gold"]
+>>> metals = pd.Categorical(metal_values, categories=metal_categories, ordered=True)
+>>> metals
+[bronze, gold, silver, bronze]
+Categories (3, object): [bronze < silver < gold]
 
-Several pandas functions also return Categoricals. One is pd.cut(), which creates bins of objects within specific ranges of values.
+>>> metals_reversed = pd.Categorical(metals.get_values()[::-1], categories=metals.categories, ordered=True)
+>>> metals_reversed
+[bronze, silver, gold, bronze]
+Categories (3, object): [bronze < silver < gold]
+>>> metals.codes
+array([0, 2, 1, 0], dtype=int8)
+>>> metals_reversed.codes
+array([0, 1, 2, 0], dtype=int8)
+>>> metals <= metals_reversed
+array([ True, False,  True,  True])
+This comparison is performed by pandas by matching the underlying code for each value.
