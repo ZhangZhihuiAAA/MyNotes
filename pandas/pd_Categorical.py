@@ -65,3 +65,8 @@ array([0, 1, 2, 0], dtype=int8)
 >>> metals <= metals_reversed
 array([ True, False,  True,  True])
 This comparison is performed by pandas by matching the underlying code for each value.
+
+If a value (copper) that is not one of the specified categories, pandas will substitute NaN for that value.
+>>> pd.Categorical(["bronze", "coper"], categories=metal_categories)
+[bronze, NaN]
+Categories (3, object): [bronze, silver, gold]
