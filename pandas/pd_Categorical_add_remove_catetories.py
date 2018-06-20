@@ -15,3 +15,12 @@ Categories (2, object): [silver < gold]
 >>> metals
 [bronze, gold, silver, bronze]
 Categories (3, object): [bronze < silver < gold]
+
+
+>>> with_platinum
+[bronze, silver, gold, bronze]
+Categories (4, object): [bronze, silver, gold, platinum]
+>>> with_platinum.remove_unused_categories(inplace=True)
+>>> with_platinum
+[bronze, silver, gold, bronze]
+Categories (3, object): [bronze, silver, gold]
