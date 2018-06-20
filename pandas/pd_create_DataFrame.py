@@ -1,3 +1,12 @@
+>>> names = ['Lampard', 'Frank']
+>>> grades = [80, 90]
+>>> scores = pd.DataFrame({'Name': names, 'Grade': grades})
+>>> scores
+   Grade     Name
+0     80  Lampard
+1     90    Frank
+
+
 >>> pd.DataFrame(np.arange(1, 6))
    0
 0  1
