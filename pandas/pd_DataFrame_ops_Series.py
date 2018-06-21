@@ -51,3 +51,27 @@ Name: 0, dtype: float64
 2 NaN  1.725378  0.487751 NaN NaN
 3 NaN  0.707856  0.833478 NaN NaN
 4 NaN  0.107101  1.149587 NaN NaN
+
+
+>>> a_col = df['A']
+>>> df - a_col
+    A   B   C   D   0   1   2   3   4
+0 NaN NaN NaN NaN NaN NaN NaN NaN NaN
+1 NaN NaN NaN NaN NaN NaN NaN NaN NaN
+2 NaN NaN NaN NaN NaN NaN NaN NaN NaN
+3 NaN NaN NaN NaN NaN NaN NaN NaN NaN
+4 NaN NaN NaN NaN NaN NaN NaN NaN NaN
+>>> df.sub(a_col, axis=1)
+    A   B   C   D   0   1   2   3   4
+0 NaN NaN NaN NaN NaN NaN NaN NaN NaN
+1 NaN NaN NaN NaN NaN NaN NaN NaN NaN
+2 NaN NaN NaN NaN NaN NaN NaN NaN NaN
+3 NaN NaN NaN NaN NaN NaN NaN NaN NaN
+4 NaN NaN NaN NaN NaN NaN NaN NaN NaN
+>>> df.sub(a_col, axis=0)
+     A         B         C         D
+0  0.0  0.683651 -0.314731 -0.351023
+1  0.0 -0.572375 -1.872873 -1.684034
+2  0.0  0.477412  0.238167 -2.065244
+3  0.0 -0.046079  1.077925  0.611438
+4  0.0  1.629795  3.670663  1.563068
