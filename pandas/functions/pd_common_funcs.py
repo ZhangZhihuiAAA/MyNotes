@@ -79,3 +79,24 @@ Name: MSFT, dtype: float64
 1     48.46
 16    48.45
 Name: MSFT, dtype: float64
+
+
+>>> s = pd.Series([1, 2, 3, 4])
+>>> s
+0    1
+1    2
+2    3
+3    4
+dtype: int64
+>>> s.cumprod()
+0     1
+1     2
+2     6
+3    24
+dtype: int64
+>>> s.cumsum()
+0     1
+1     3
+2     6
+3    10
+dtype: int64
