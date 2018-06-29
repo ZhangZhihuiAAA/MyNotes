@@ -187,3 +187,6 @@ var(axis=None, skipna=None, level=None, ddof=1, numeric_only=None, **kwargs) met
 2.0
 >>> a.std(ddof=0)
 1.632993161855452
+In statistics, the number of degrees of freedom is the number of values in the final calculation of a statistic that are free to vary.
+The number of independent ways by which a dynamic system can move, without violating any constraint imposed on it, is called number of degrees of freedom. In other words, the number of degrees of freedom can be defined as the minimum number of independent coordinates that can specify the position of the system completely.
+Estimates of statistical parameters can be based upon different amounts of information or data. The number of independent pieces of information that go into the estimate of a parameter are called the degrees of freedom. In general, the degrees of freedom of an estimate of a parameter are equal to the number of independent scores that go into the estimate minus the number of parameters used as intermediate steps in the estimation of the parameter itself (most of the time the sample variance has N − 1 degrees of freedom, since it is computed from N random scores minus the only 1 parameter estimated as intermediate step, which is the sample mean).
