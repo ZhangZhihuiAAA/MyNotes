@@ -149,3 +149,41 @@ dtype: float64
 0    1
 1    3
 dtype: int64
+
+
+>>> a = pd.Series([3, 1, 5])
+>>> a.var()
+4.0
+>>> help(a.var)
+Help on method var in module pandas.core.series:
+
+var(axis=None, skipna=None, level=None, ddof=1, numeric_only=None, **kwargs) method of pandas.core.series.Series instance
+    Return unbiased variance over requested axis.
+
+    Normalized by N-1 by default. This can be changed using the ddof argument
+
+    Parameters
+    ----------
+    axis : {index (0)}
+    skipna : boolean, default True
+        Exclude NA/null values. If an entire row/column is NA, the result
+        will be NA
+    level : int or level name, default None
+        If the axis is a MultiIndex (hierarchical), count along a
+        particular level, collapsing into a scalar
+    ddof : int, default 1
+        degrees of freedom
+    numeric_only : boolean, default None
+        Include only float, int, boolean columns. If None, will attempt to use
+        everything, then use only numeric data. Not implemented for Series.
+
+    Returns
+    -------
+    var : scalar or Series (if level specified)
+
+>>> a.var(ddof=0)
+2.6666666666666665
+>>> a.std()
+2.0
+>>> a.std(ddof=0)
+1.632993161855452
