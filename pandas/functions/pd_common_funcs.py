@@ -212,3 +212,22 @@ cov(other, min_periods=None) method of pandas.core.series.Series instance
     covariance : float
 
     Normalized by N-1 (unbiased estimator).
+
+
+>>> np.random.seed(12345)
+>>> s = pd.Series(np.random.randn(5), index=list('abcde'))
+>>> s
+a   -0.204708
+b    0.478943
+c   -0.519439
+d   -0.555730
+e    1.965781
+dtype: float64
+>>> s.rank()
+a    3.0
+b    4.0
+c    2.0
+d    1.0
+e    5.0
+dtype: float64
+There are a number of options that you can use to change this default behavior, such as specifying a custom ranking function and how to decide a ranking when there is a tie.
