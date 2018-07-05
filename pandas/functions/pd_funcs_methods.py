@@ -231,3 +231,19 @@ d    1.0
 e    5.0
 dtype: float64
 There are a number of options that you can use to change this default behavior, such as specifying a custom ranking function and how to decide a ranking when there is a tie.
+
+
+>>> omh[['MSFT']]
+     MSFT
+0   48.62
+1   48.46
+2   48.08
+3   48.84
+4   48.42
+>>> omh[['MSFT']].pct_change()
+        MSFT
+0        NaN
+1  -0.003291
+2  -0.007842
+3   0.015807
+4  -0.008600
