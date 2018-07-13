@@ -1,0 +1,11 @@
+sqlite> .schema temp
+CREATE TABLE temp (aaa VARCHAR(10));
+
+sqlite> PRAGMA table_info('sso_run_log');
+0|log_full_path|VARCHAR(500)|0||0
+1|s_schedule|VARCHAR(500)|0||0
+2|s_logdate|CHAR(8)|0||0
+3|e_name|VARCHAR(100)|0||0
+4|e_start_time|CHAR(17)|0||0
+5|e_end_time|CHAR(17)|0||0
+6|e_elapsed|CHAR(8)|0||0
